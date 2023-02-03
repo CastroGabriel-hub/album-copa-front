@@ -20,6 +20,9 @@ function LandingPage() {
                 <Card
                     name={player.Player}
                     position={player.Position}
+                    club={player.Club}
+                    age={player.Age}
+                    caps={player.Caps}
                 />
             )}
         </DefaultPage>
