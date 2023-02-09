@@ -16,15 +16,17 @@ function LandingPage() {
 
     return (
         <DefaultPage>
-            {players.map(player =>
-                <Card
-                    name={player.Player}
-                    position={player.Position}
-                    club={player.Club}
-                    age={player.Age}
-                    caps={player.Caps}
-                />
-            )}
+            <div className='cards-holder'>
+                {players.map(player =>
+                    <Card
+                        name={player.Player}
+                        position={player.Position}
+                        club={player.Club}
+                        age={player.Age}
+                        caps={player.Caps}
+                    />
+                )}
+            </div>
         </DefaultPage>
     )
 }

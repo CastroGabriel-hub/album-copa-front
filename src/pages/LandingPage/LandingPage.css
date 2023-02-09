@@ -1,0 +1,10 @@
+.cards-holder{
+    padding: 70px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 70px;
+    justify-items: center;
+    background-color: rgb(131, 6, 46);
+    background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+
+}

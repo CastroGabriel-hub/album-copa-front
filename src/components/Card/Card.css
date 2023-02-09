@@ -1,39 +1,46 @@
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 30vh;
-    width: 100vw;
-    background-color: #8a0707;
-}
-.row{
-    flex-direction: row;
-    justify-content: row;
-    align-content: center;
-    width: 100vw;
-    height: 25vh;
-}
 .card{
+    width: 300px;
+    height: 400px;
+    padding: 5px;
+    margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 25%;
-    border-radius: 5px;
-    margin: auto;
-    padding: 5px;
-}
-.dados{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: left;
-    width: 100%;
-    font-size: 0.55rem;
-    border-radius: 5px;
-    background-color: rgb(133, 23, 23);
-    color: yellow;
-    padding: 5px;
+    background: rgb(82,194,176);
+    background: radial-gradient(circle, rgba(82,194,176,1) 0%, rgba(95,70,156,1) 100%);
+    /* border: 2px solid #B38728; */
+    position: relative;
 }
 
+.card h3{
+    padding: 10px;
+    font-size: 26px;
+    background: #FFF;
+    color: rgb(131, 6, 46);
+    position: absolute;
+    bottom: 26px;
+}
 
+.card p{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.position{
+    position: absolute;
+    top: 0;
+}
+
+.club{
+    position: absolute;
+    bottom: 105px;
+}
+
+.age{
+    padding: 10px;
+    background-color: rgb(131, 6, 46);
+    position: absolute;
+    bottom: 0;
+    font-size: 18px !important;
+}
