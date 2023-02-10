@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import Card from '../../components/Card/Card';
 import DefaultPage from '../../layout/DefaultPage/DefaultPage';
+import playerImg from '../../assets/player.png';
 import './LandingPage.css';
 
 function LandingPage() {
@@ -23,7 +24,7 @@ function LandingPage() {
                         position={player.Position}
                         club={player.Club}
                         age={player.Age}
-                        caps={player.Caps}
+                        img={playerImg}
                     />
                 )}
             </div>
