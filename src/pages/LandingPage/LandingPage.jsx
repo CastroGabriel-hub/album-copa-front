@@ -1,32 +1,31 @@
-import axios from 'axios';
-import { useState, useEffect } from 'react';
-import Card from '../../components/Card/Card';
+import { Link } from 'react-router-dom';
 import DefaultPage from '../../layout/DefaultPage/DefaultPage';
-import playerImg from '../../assets/player.png';
+import brasil from '../../assets/brasil.jpg';
+import argentina from '../../assets/argentina.jpg';
+import franca from '../../assets/franca.jpg';
+import all from '../../assets/all.jpg';
 import './LandingPage.css';
 
 function LandingPage() {
-    const [players, setPlayers] = useState([]);
-
-    useEffect(() => {
-        axios.get('http://localhost:8082/')
-            .then(res => {
-                setPlayers(res.data);
-            });
-    }, [])
-
     return (
         <DefaultPage>
-            <div className='cards-holder'>
-                {players.map(player =>
-                    <Card
-                        name={player.Player}
-                        position={player.Position}
-                        club={player.Club}
-                        age={player.Age}
-                        img={playerImg}
-                    />
-                )}
+            <div className='content'>
+                <div className="left">
+                    <Link to='/brasil'>
+                        <img src={brasil} alt="bandeira do Brasil" />
+                    </Link>
+                </div>
+                <div className="right">
+                    <Link to='/argentina'>
+                        <img src={argentina} alt="bandeira da Argentina" />
+                    </Link>
+                    <Link to='/franca'>
+                        <img src={franca} alt="bandeira da França" />
+                    </Link>
+                    <Link to='/todos'>
+                        <img src={all} alt="todos os países" />
+                    </Link>
+                </div>
             </div>
         </DefaultPage>
     )
